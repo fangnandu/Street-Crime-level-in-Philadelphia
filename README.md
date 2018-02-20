@@ -18,7 +18,7 @@ In this project, I used the crimes, census tracts and street shapefile to create
 I only have processed around 15,000 crime data. It takes 20 mins to run the spatial query. So although the final result(crime level) is low, I will not update the crime data to a bigger scale, becuase it takes too long to run.
 The data scale is a drawback for this project.
 
-## Below is the map I create showing the crime level for each street:
+## Below is the map I created showing the crime level for each street:
 ![alt text](https://github.com/fangnandu/Street-Crime-level/blob/master/final%20crime%20frequency%20map.png "Logo Title Text 1")
 
 
