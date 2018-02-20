@@ -100,6 +100,9 @@ spatialQuery <- paste0("SELECT a.* ",
                        "FROM phillysf AS p, crimes AS a ",
                        "WHERE ST_Contains(p.wkb_geometry, a.wkb_geometry)")
 crimesInPhilly <- st_read_db(con, query=spatialQuery, geom_column='wkb_geometry')
+# this step is important, because it can avoid error: wkb_geometry has already exist
+accidentsInPhilly <- rename(accidentsInPhilly ,oldgeom=wkb_geometry)
+
 st_write_db(con, crimesInPhilly, "crimesinphilly", drop=TRUE)
 
 # create the index for processing quicker( later spatialquery)
