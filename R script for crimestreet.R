@@ -194,7 +194,7 @@ sqlCommand1 <- paste0("SELECT s.seg_id,COUNT(c.*) AS num ",
 countnew<-dbGetQuery(con, sqlCommand1)
 
 # adding the spatial info to the streets which have the count number of seg_id 
-countnew<-merge(count,phillyStreets)
+countnew<-merge(countnew,phillyStreets)
 
 # 6 data visualization
 
